@@ -9,19 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Warm Neutrals (Slate) with a Teal Accent -->
-    <!-- Application Structure Plan: A single-page application with a sticky top navigation for easy access to key sections (Summary, Skills, Experience, Education). The structure is designed to guide the user through a narrative of professional capabilities. It starts with a broad summary and key achievements, then allows interactive exploration of skills via a filterable chart, followed by a chronological journey through an interactive timeline of experience. This is more engaging than a linear document and allows recruiters to quickly access the information most relevant to them, enhancing usability. -->
-    <!-- Visualization & Content Choices: 
-        - Report Info: Core Competencies (list of skills). Goal: Organize and allow exploration. Viz/Method: Interactive Doughnut Chart (Chart.js) and filterable lists. Interaction: Clicking a chart segment filters the visible skill list; clicking again deselects. Justification: Condenses a long list into a visual summary and provides a focused view, which is more user-friendly than scrolling. Library: Chart.js.
-        - Report Info: Key Metrics (5000+ designs, 1500+ listings). Goal: Inform and impress. Viz/Method: Large-font "Key Stats" cards. Interaction: Numbers animate (count up) when scrolled into view. Justification: Draws immediate attention to key achievements, creating a strong impact. Library/Method: Vanilla JS with IntersectionObserver.
-        - Report Info: Professional Experience. Goal: Show career progression. Viz/Method: Vertical Timeline. Interaction: Each job entry is a clickable accordion, revealing details on demand. Justification: A timeline is a natural and visually appealing way to represent career history, and the accordion keeps the UI clean and focused. Library/Method: HTML/CSS/JS.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
+            background-color: #f1f5f9; /* slate-100 */
             color: #1e293b; /* slate-800 */
+            position: relative;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(20,184,166,0.15) 0%, rgba(20,184,166,0) 70%),
+                radial-gradient(circle at 90% 80%, rgba(13,148,136,0.1) 0%, rgba(13,148,136,0) 70%);
+            background-repeat: no-repeat;
+            background-size: 80% 80%, 60% 60%;
+            background-position: top left, bottom right;
         }
         .chart-container {
             position: relative;
@@ -52,7 +52,7 @@
             left: -0.5rem;
             top: 0.25rem;
             background-color: #0d9488; /* teal-600 */
-            border: 2px solid #f8fafc; /* slate-50 */
+            border: 2px solid #e2e8f0; /* slate-200 */
         }
         .custom-shape {
             border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -99,10 +99,10 @@
                         <img src="pranto.jpg" alt="Professional headshot of MD. Saif" class="custom-shape w-48 h-48 md:w-64 md:h-64 shadow-lg">
                         <h3 class="text-2xl font-bold text-slate-800 mt-4">MD. Saif</h3>
                         <div class="mt-1 text-center text-slate-500 font-medium">
-                            <p>[Your City, Bangladesh] | [Your Phone Number] | [Your Email Address]</p>
+                            <p>Rangpur, Bangladesh |             mdabusaif98@gmail.com</p>
                             <p class="mt-1">
-                                <a href="#" class="text-slate-600 hover:text-teal-600 transition-colors">Behance</a> | 
-                                <a href="#" class="text-slate-600 hover:text-teal-600 transition-colors">LinkedIn</a>
+                                <a href="https://www.behance.net/abutocreatives" class="text-teal-600 hover:text-teal-600 transition-colors font-bold">Behance</a> | 
+                                <a href="https://www.linkedin.com/in/md-saif-designer/" class="text-teal-600 hover:text-teal-600 transition-colors font-bold">LinkedIn</a>
                             </p>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                                 <li>Canva</li>
                             </ul>
                         </div>
-                         <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
                             <h3 class="font-bold text-lg text-teal-700 mb-3">Design Skills</h3>
                             <ul class="space-y-2 text-stone-600">
                                 <li>T-shirt & SVG Design</li>
